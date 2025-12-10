@@ -4,5 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Projects/~Scene/Location soccer field.unity
+    guid: b02f46ebb4f474b40bc3e09f976972fb
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 996a7d16b9d2aed449c0cb823dad59cc, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d25b89345c7d3fa4eabf3d95b2e0ec4a, type: 3}
