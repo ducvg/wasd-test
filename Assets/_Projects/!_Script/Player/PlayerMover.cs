@@ -43,7 +43,7 @@ public sealed class PlayerMover : MonoBehaviour
     {
         Vector3 targetVelocity = moveDir * MaxMoveSpeed;
         MoveVelocity = Vector3.MoveTowards(MoveVelocity, targetVelocity, moveSpeedRampUpFactor);
-        rb.velocity = MoveVelocity.WithY(rb.velocity.y);
+        rb.MovePosition(rb.position + MoveVelocity * Time.fixedDeltaTime);
     }
 
     void Rotate(Vector3 lookDir) 
@@ -56,7 +56,7 @@ public sealed class PlayerMover : MonoBehaviour
     void StopMove()
     {
         MoveVelocity = Vector3.MoveTowards(MoveVelocity, Vector3.zero, moveSpeedRampDownFactor);
-        rb.velocity = MoveVelocity.WithY(rb.velocity.y);
+        rb.MovePosition(rb.position + MoveVelocity * Time.fixedDeltaTime);
     }
 }
 

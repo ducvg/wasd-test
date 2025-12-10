@@ -1,7 +1,5 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public sealed class BallKicker : MonoBehaviour
 {

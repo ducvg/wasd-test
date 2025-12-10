@@ -40,11 +40,10 @@ public sealed class CameraManager : Singleton<CameraManager>
         followPlayerCoroutine = StartCoroutine(FollowPlayerFallback());
     }
 
-    private WaitForSeconds wait10s = new(7f);
+    private WaitForSeconds wait7s = new(7f);
     private IEnumerator FollowPlayerFallback()
     {
-        yield return wait10s;
-        if(playerCam.enabled) yield break;
+        yield return wait7s;
         FollowPlayer();
     }
 }
