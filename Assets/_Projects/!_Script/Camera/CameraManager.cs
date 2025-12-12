@@ -23,18 +23,20 @@ public sealed class CameraManager : Singleton<CameraManager>
         ballCam.enabled = false;
         playerCam.enabled = true;
         await UniTask.Delay(500, cancellationToken: destroyCancellationToken).SuppressCancellationThrow();
-        InputController.SetMovementInputActive(true);
+        
+        InputService.SetMovementInputActive(true);
         UIManager.Instance.SetBallCanvasActive(true);
         UIManager.Instance.SetAutoKickBtnActive(true);
     }
 
     public void FollowBall(Ball followBall)
     {
-        ballCam.Follow = followBall.transform;        
+        ballCam.Follow = followBall.transform;
 
         ballCam.enabled = true;
         playerCam.enabled = false;
-        InputController.SetMovementInputActive(false);
+
+        InputService.SetMovementInputActive(false);
         UIManager.Instance.SetBallCanvasActive(false);
         UIManager.Instance.SetAutoKickBtnActive(false);
         
