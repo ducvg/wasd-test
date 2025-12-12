@@ -2882,10 +2882,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamTf: {fileID: 83060738}
   rb: {fileID: 1653237857}
-  turnSpeed: 10
   <MaxMoveSpeed>k__BackingField: 4
   moveSpeedRampUpFactor: 0.3
-  moveSpeedRampDownFactor: 0.3
+  moveSpeedRampDownFactor: 0.2
+  turnSpeed: 10
 --- !u!54 &1653237857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2905,7 +2905,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1

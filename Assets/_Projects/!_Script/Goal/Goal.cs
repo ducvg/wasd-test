@@ -8,6 +8,7 @@ public sealed class Goal : MonoBehaviour
 
     async void OnCollisionEnter(Collision collision)
     {
+        if(!BallColliderMap.GetBallByCollider(collision.collider)) return; //not ball
         if(collision == lastBallCollision) return;
 
         goalParticle.Play();

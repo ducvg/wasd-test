@@ -12,7 +12,6 @@ public sealed class AnimationController : MonoBehaviour
         UpdateMovementAnimation();
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     void UpdateMovementAnimation()
     {
         float blendMovement = Mathf.InverseLerp(0, playerMover.MaxMoveSpeed, playerMover.MoveVelocity.magnitude); 

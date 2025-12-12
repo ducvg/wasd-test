@@ -18,7 +18,8 @@ public sealed class CameraManager : Singleton<CameraManager>
 
     public async void FollowPlayer()
     {
-        StopCoroutine(followPlayerCoroutine);
+        if(followPlayerCoroutine != null) StopCoroutine(followPlayerCoroutine);
+        
         ballCam.enabled = false;
         playerCam.enabled = true;
         await UniTask.Delay(500, cancellationToken: destroyCancellationToken).SuppressCancellationThrow();
